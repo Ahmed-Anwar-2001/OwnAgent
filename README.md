@@ -43,7 +43,7 @@ https://github.com/Ahmed-Anwar-2001/OwnAgent/assets/68177550/e1ffc333-e170-4e1d-
 
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE file]([https://pages.github.com/](https://github.com/Ahmed-Anwar-2001/OwnAgent/blob/main/LICENSE)) for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Ahmed-Anwar-2001/OwnAgent/blob/main/LICENSE) file for details.
 
 ## Acknowledgements
 Thanks to the contributors of the Python Eel library and the crewAI framework.
