@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #111;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+.navbar .menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.navbar .navbar-title {
+  margin: 0;
+  font-size: 24px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  color: white;
+  padding-top: 60px;
+  z-index: 999;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  padding: 15px 20px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.sidebar nav ul li:hover {
+  background-color: #575757;
+}
+
+.main-content {
+  margin-top: 60px; /* Adjusted for the navbar height */
+  margin-left: 250px; /* Adjusted for the sidebar width */
+  padding: 20px;
+  transition: margin-left 0.5s;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px); /* Adjusted for the navbar height */
+  box-sizing: border-box;
+}
+
+.content-section {
+  flex-grow: 1;
+  padding: 20px;
+  border: 1px solid #ddd;
+  overflow-y: auto;
+}
+
+.chat-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+  background-color: #f1f1f1;
+}
+
+.chat-section input {
+  width: 90%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.chat-section button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible{
+  display: block;
+}
+
+.add-task h2, .edit-task h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.add-task h3, .edit-task h3 {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.section h4 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.image-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.image-list img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.image-list button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: white;
+  background-color: #000;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.image-list button:hover {
+  background-color: #333;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+.btn-black {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.btn-black:hover {
+  background-color: #333;
+}
+
+.recording-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.recording-controls {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.recording-controls button {
+  width: 25%;
+}
+
+#recording-message{
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+  margin: 70px;
+  text-align: center;
+}
+
+
+.task{
+  font-weight: bold;
+  font-style: italic;
+  margin: 20px;
+}
+
+.perform{
+  width: 100%;
+  height: 100%;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 8px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  resize: none;
+  overflow-y: scroll;
+}
+
+.add-task input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}

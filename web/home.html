@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OwnAgent</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="menu-icon" id="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+        <h1 class="navbar-title">OwnAgent</h1>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <nav>
+            <ul><hr>
+                <li onclick="showSection('add-task')">Add Task</li><hr>
+                <li onclick="showSection('task-list')">Task List</li><hr>
+                <li onclick="showSection('import-export')">Import/Export Task</li><hr>
+                <li onclick="showSection('perform-task')">Perform Task</li><hr>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content" id="main-content">
+        <div class="content-section" id="content-section">
+            <div class="add-task" id="add-task">
+                <h2>Add Task</h2>
+                <hr>
+                <h3><label for='task_name'>Task Name: </label> <input type="text" id="task_name" name="task_name" placeholder="Enter the task name" required></h3>
+                <h3><label for="task_description">Task Description: </label></h3>
+                <textarea id="task_description" name="task_description" placeholder="Enter Task Description here..." required></textarea>   
+                    </textarea></h3>
+                <button class="btn-black" id="add-task-btn" onclick="startRecording()">Start Recording</button>
+                <button class="btn-black hidden" id="stop-recording" onclick="stopRecording()">Stop Recording</button>
+                <div id="recording-message" class="hidden">Recording!</div>
+                <div id="recording-controls" class="recording-controls hidden">
+                    <button class="btn-black" id="edit-recording" onclick="showSection('edit-task')">Edit</button>
+                    <button class="btn-black" id="cancel-recording" onclick="cancelRecording()">Cancel</button>
+                    <button class="btn-black" id="save-recording" onclick="saveRecording()">Save</button>
+                </div>
+            </div>
+            <div class="task-list" id="task-list">
+                <h2>Task List</h2>
+                <hr>
+                <p>Here is your task list.</p>
+                <div class="task-section">
+                    <div class="task-list-tasks" id="task-list-tasks">
+
+                    </div>
+                </div>
+            </div>
+            <div class="import-export" id="import-export">
+                <h2>Import/Export Task</h2><p>Here you can import/export tasks.</p>
+            </div>
+            <div class="perform-task" id="perform-task">
+                <h2>Perform Task</h2><p>Here you can perform tasks.</p>
+                <img id="perform" class="perform" src="images/owngpt.jpg" alt="">
+            </div>
+            <div class="edit-task" id="edit-task">
+                <h2>Edit Task</h2>
+                <hr>
+                <h3>Here you can edit tasks.</h3>
+                <div class="section">
+                    <h4>Mouse Clicks</h4>
+                    <div class="image-list" id="mouse-clicks">
+                        <!-- Images from a specific folder will be dynamically loaded here -->
+                    </div>
+                </div>
+                <div class="section">
+                    <h4>Keyboard Interactions</h4>
+                    <div class="image-list" id="keyboard-interactions">
+                        <!-- Images from a specific folder will be dynamically loaded here -->
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-black" onclick="cancelEdit()">Cancel</button>
+                    <button class="btn-black" onclick="saveEdit()">Done</button>
+                </div>
+            </div>
+        </div>
+        <div class="chat-section">
+            <input type="text" placeholder="Enter your prompt" id="user-prompt">
+            <button onclick="sendPrompt()">Send</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
